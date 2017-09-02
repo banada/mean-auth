@@ -1,0 +1,11 @@
+<div class="nav navbar-nav navbar-right">
+    <p ng-hide="isLoggedIn">
+      <a href="login">Log in</a>
+    </p>
+    <p ng-show="isLoggedIn">
+    <a href="profile">{{ currentUser.email }}</a>
+    </p>
+    <p>
+    <a href="login" onclick="logout()">Log out</a>
+    </p>
+</div>

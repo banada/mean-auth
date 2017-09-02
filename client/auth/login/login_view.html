@@ -1,0 +1,14 @@
+<h1>Log in</h1>
+<p>Not a member? Please <a href="register">register</a></p>
+
+<form ng-submit="onSubmit()" ng-controller="loginController">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" class="form-control" id="email" placeholder="Email" ng-model="credentials.email"></input>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control" id="password" placeholder="Password" ng-model="credentials.password"></input>
+  </div>
+  <button type="submit" class="btn btn-default">Log in</button>
+</form>

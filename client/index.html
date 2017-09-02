@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <base href="/"></base>
+        <script src="https://code.angularjs.org/1.6.5/angular.js"></script>
+        <script src="https://code.angularjs.org/1.6.5/angular-route.js"></script>
+        <script src="app.js"></script>
+        <script src="common/services/auth_service.js"></script>
+        <script src="common/services/data_service.js"></script>
+        <script src="auth/login/login_controller.js"></script>
+        <script src="auth/register/register_controller.js"></script>
+        <script src="profile/profile_controller.js"></script>
+        <script src="common/directives/navigation/navigation_controller.js"></script>
+        <script src="common/directives/navigation/navigation_directive.js"></script>
+    </head>
+    <body ng-app="authApp">
+        <div ng-view>
+        </div>
+    </body>
+</html>
