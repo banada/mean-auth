@@ -23,11 +23,11 @@ let user = new mongoose.Schema({
 // Register the user's password hash without saving the password to db
 user.methods.setPassword = function(password) {
     this.salt = crypto.randomBytes(16).toString('hex');
-    this.hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64).toString('hex');
+    this.hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, 'sha512').toString('hex');
 };
 
 user.methods.checkPassword = function(password) {
-    let hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64).toString('hex');
+    let hash = crypto.pbkdf2Sync(password, this.salt, 1000, 64, 'sha512').toString('hex');
     return this.hash === hash;
 };
 
